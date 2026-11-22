@@ -1,0 +1,121 @@
+.gallery {
+    width: 100%;
+    min-width: 0;
+}
+
+.gallery-viewport {
+    position: relative;
+    width: 100%;
+    height: var(--gallery-height);
+    max-height: 75vh;
+    overflow: hidden;
+    border-radius: var(--gallery-radius);
+}
+
+.gallery-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+
+.gallery-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--white);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.gallery-arrow-left {
+    left: 15px;
+}
+
+.gallery-arrow-right {
+    right: 15px;
+}
+
+.gallery-arrow img {
+    width: 20px;
+    height: 20px;
+}
+
+.gallery-arrow:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.gallery-thumbnails {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.gallery-thumbnail {
+    flex: 0 0 117px;
+    width: 117px;
+    height: 95px;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: var(--gallery-radius);
+    overflow: hidden;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.gallery-thumbnail.selected {
+    border-color: var(--primary);
+}
+
+.gallery-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .gallery-viewport {
+        height: auto;
+        aspect-ratio: 1440 / 681;
+        max-height: none;
+    }
+
+    .gallery-arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+    .gallery-arrow img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .gallery-thumbnail {
+        flex-basis: 80px;
+        width: 80px;
+        height: 70px;
+    }
+}

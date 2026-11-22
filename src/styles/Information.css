@@ -1,0 +1,24 @@
+.footer-information h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--white);
+}
+
+.footer-information ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-information a {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer-information a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,110 @@
+.product-view-page {
+    background-color: #f9f8fe;
+    min-height: 80vh;
+    padding: 25px 20px 80px;
+}
+
+.product-view-container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.product-view-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 35px;
+    font-size: 14px;
+    color: var(--dark-gray-3);
+}
+
+.product-view-breadcrumb a {
+    color: var(--dark-gray-3);
+    text-decoration: none;
+}
+
+.product-view-breadcrumb a:hover {
+    color: var(--primary);
+}
+
+.product-view-content {
+    display: grid;
+    grid-template-columns: minmax(0, 700px) minmax(0, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+.product-view-gallery {
+    min-width: 0;
+}
+
+.product-view-content .buy-box {
+    max-width: 100%;
+}
+
+.product-view-recommendations {
+    margin-top: 90px;
+}
+
+.product-view-recommendations .product-listing {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.product-view-not-found {
+    min-height: 50vh;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.product-view-not-found h1 {
+    margin-bottom: 15px;
+    color: var(--dark-gray);
+}
+
+.product-view-not-found a {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .product-view-content {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 25px;
+    }
+
+    .product-view-recommendations .product-listing {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .product-view-page {
+        padding: 20px 15px 50px;
+    }
+
+    .product-view-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .product-view-gallery .gallery-viewport {
+        aspect-ratio: 700 / 500;
+    }
+
+    .product-view-breadcrumb {
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+
+    .product-view-recommendations {
+        margin-top: 60px;
+    }
+
+    .product-view-recommendations .product-listing {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+}

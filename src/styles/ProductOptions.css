@@ -1,0 +1,45 @@
+.product-options {
+    width: 100%;
+}
+
+.product-options-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.product-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0;
+    background-color: var(--white);
+    border: 1px solid var(--light-gray-2);
+    color: var(--dark-gray-2);
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.product-option.square {
+    width: 46px;
+    height: 46px;
+    font-size: 24px;
+}
+
+.product-option.circle {
+    width: 31px;
+    height: 31px;
+    font-size: 14px;
+}
+
+.product-option.selected {
+    border: 2px solid var(--primary);
+}
+
+.product-option:focus-visible {
+    outline: 2px solid var(--tertiary);
+    outline-offset: 3px;
+}
+
